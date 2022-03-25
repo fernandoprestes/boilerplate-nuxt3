@@ -1,6 +1,12 @@
 <template>
   <div class="container">
     <h1>Hello World</h1>
+    <img
+      v-for="i in items"
+      :key="i"
+      src=""
+      alt=""
+    />
   </div>
 </template>
 <script lang="ts">
@@ -9,5 +15,10 @@
   export default defineComponent({
     layout: 'default',
     setup() {},
+    data() {
+      return {
+        items: [],
+      };
+    },
   });
 </script>
