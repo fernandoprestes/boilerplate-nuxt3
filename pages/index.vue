@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Hello World</h1>
+    <h1 class="">Hello World</h1>
   </div>
 </template>
 <script lang="ts">
@@ -8,6 +8,10 @@
 
   export default defineComponent({
     layout: 'default',
-    setup() {},
+    setup() {
+      definePageMeta({
+        title: 'Home',
+      });
+    },
   });
 </script>
