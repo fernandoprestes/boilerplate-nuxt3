@@ -1,6 +1,21 @@
-node_modules
-*.log
-.nuxt
-nuxt.d.ts
+# Nuxt dev/build outputs
 .output
-.env
+.nuxt
+
+# Node dependencies
+node_modules
+
+# System files
+*.log
+
+### Nuxtjs ###
+# Nuxt build
+.nuxt
+.output
+
+# Nuxt generate
+dist
+
+#yarn npm 
+npm-debug.log
+yarn-error.log

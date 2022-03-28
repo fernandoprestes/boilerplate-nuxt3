@@ -5,14 +5,28 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
-  css: ['~/assets/css/main.css'],
+
+  meta: {
+    title: 'Boilerplate Nuxt3',
+    meta: [
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Boilerplate Nuxt3',
+      },
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+  },
+
+  css: ['@/assets/css/main.css'],
+
   build: {
     postcss: {
       postcssOptions: {
         plugins: {
-          'tailwindcss/nesting': {},
-          'tailwindcss': {},
-          'autoprefixer': {},
+          tailwindcss: {},
+          autoprefixer: {},
         },
       },
     },
