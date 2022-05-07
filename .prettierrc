@@ -5,6 +5,6 @@
   "quoteProps": "consistent",
   "arrowParens": "avoid",
   "vueIndentScriptAndStyle": true,
-  "endOfLine": "crlf",
+  "endOfLine": "auto",
   "singleAttributePerLine": true
 }
