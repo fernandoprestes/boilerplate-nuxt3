@@ -1,10 +1,10 @@
-# Nuxt 3 Minimal Starter
+# Template de projeto Nuxt3
 
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
+Este repositório serve como um template para projetos Nuxt3, Recomendo que consulte a [documentação](https://v3.nuxtjs.org).
 
 ## Setup
 
-Make sure to install the dependencies
+Instale as dependências
 
 ```bash
 yarn install
@@ -12,18 +12,31 @@ yarn install
 
 ## Development
 
-Start the development server on http://localhost:3000
+Comece o desenvolvimento em http://localhost:3000
 
 ```bash
 yarn dev
 ```
 
-## Production
+## Tecnologias
 
-Build the application for production:
+- [Nuxt](https://v3.nuxtjs.org/)
+- [Tailwindcss](https://tailwindcss.com/)
+- [Eslint](https://eslint.org/)
+- [Eslint-plugin-vue](https://eslint.vuejs.org/)
+- [Prettier](https://prettier.io/)
+- [Typescript](https://www.typescriptlang.org/)
 
-```bash
-yarn build
-```
+### Ferramentas recomendadas
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+- [VSCode](https://code.visualstudio.com/)
+- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- [Vue](https://marketplace.visualstudio.com/items?itemName=znck.vue)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [Tailwindcss](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+---
+
+2022 - [github.com/fernandoprestes](https://github.com/fernandoprestes)
