@@ -1,3 +1,14 @@
+<script
+  lang="ts"
+  setup
+>
+  import { useRoute } from 'vue-router';
+
+  const route = useRoute();
+  useHead({
+    title: computed(() => `Nuxt3 | ${route.meta.title}`),
+  });
+</script>
 <template>
   <div>
     <header class="h-20 shadow-sm flex items-">
@@ -20,18 +31,5 @@
     </div>
   </div>
 </template>
-<script lang="ts">
-  import { defineComponent } from 'vue';
-  import { useRoute } from 'vue-router';
-
-  export default defineComponent({
-    setup() {
-      const route = useRoute();
-      useHead({
-        title: computed(() => `Nuxt3 | ${route.meta.title}`),
-      });
-    },
-  });
-</script>
 
 <style lang=""></style>
