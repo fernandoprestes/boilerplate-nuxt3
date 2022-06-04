@@ -26,16 +26,16 @@ yarn dev
 - [Eslint-plugin-vue](https://eslint.vuejs.org/)
 - [Prettier](https://prettier.io/)
 - [Typescript](https://www.typescriptlang.org/)
+- [icones.js](https://icones.js.org/)
 
-### Ferramentas recomendadas
+### Ferramentas recomendadas para o [VSCode](https://code.visualstudio.com/)
 
-- [VSCode](https://code.visualstudio.com/)
-- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-- [Vue](https://marketplace.visualstudio.com/items?itemName=znck.vue)
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- [Vue 3 Snippets](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
+- [Vue VSCode Snippets](https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets)
+- [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Tailwindcss](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-- [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 
 ---
 
