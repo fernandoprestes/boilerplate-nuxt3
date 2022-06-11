@@ -2,20 +2,18 @@
   lang="ts"
   setup
 >
+  const emits = defineEmits(['click']);
   const props = defineProps({
-    // solid | outline | ghost | soft | link
     variant: {
       type: String,
       default: 'solid',
     },
-    // primary | secondary | success | warning | info
     color: {
       type: String,
       default: 'primary',
     },
   });
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const classNames = computed(() => {
     return {
       [props.variant]: true,
@@ -28,6 +26,8 @@
     type="button"
     class="btn-base"
     :class="classNames"
+    v-bind="$attrs"
+    @click="emits('click')"
   >
     <slot />
   </button>
@@ -37,62 +37,125 @@
   lang="scss"
 >
   .btn-base {
-    @apply py-3
+    @apply py-2
             px-4
+            lg:px-8
+            xl:px-10
             inline-flex
             justify-center
             items-center
             gap-2
-            rounded-md
             border
             border-transparent
+            rounded-md
             font-semibold
             focus:outline-none
             focus:ring-2
             focus:ring-offset-2
             transition-all
             duration-500
-            ease-in-out
-            text-sm;
+            ease-in-out;
   }
   .solid {
     &.primary {
-      @apply bg-primary/90 text-white;
-      &:hover {
-        @apply bg-primary;
-      }
+      @apply bg-primary/90 text-white hover:bg-primary focus:ring-primary;
+    }
+    &.secondary {
+      @apply bg-secondary/90 text-white hover:bg-secondary focus:ring-secondary;
+    }
+    &.info {
+      @apply bg-info/90 text-white hover:bg-info focus:ring-info;
+    }
+    &.success {
+      @apply bg-success/90 text-white hover:bg-success focus:ring-success;
+    }
+    &.warning {
+      @apply bg-warning/90 text-white hover:bg-warning focus:ring-warning;
+    }
+    &.error {
+      @apply bg-error/90 text-white hover:bg-error focus:ring-error;
     }
   }
   .outlined {
     &.primary {
-      @apply border-primary text-primary;
-      &:hover {
-        @apply bg-primary text-white;
-      }
+      @apply border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary;
+    }
+
+    &.secondary {
+      @apply border-secondary text-secondary hover:bg-secondary hover:text-white focus:ring-secondary;
+    }
+    &.info {
+      @apply border-info text-info hover:bg-info hover:text-white focus:ring-info;
+    }
+    &.success {
+      @apply border-success text-success hover:bg-success hover:text-white focus:ring-success;
+    }
+    &.warning {
+      @apply border-warning text-warning hover:bg-warning hover:text-white focus:ring-warning;
+    }
+    &.error {
+      @apply border-error text-error hover:bg-error hover:text-white focus:ring-error;
     }
   }
   .ghost {
     &.primary {
-      @apply text-primary;
-      &:hover {
-        @apply bg-primary/20;
-      }
+      @apply text-primary hover:bg-primary/20 focus:ring-primary;
+    }
+
+    &.secondary {
+      @apply text-secondary hover:bg-secondary/20 focus:ring-secondary;
+    }
+    &.info {
+      @apply text-info hover:bg-info/20 focus:ring-info;
+    }
+    &.success {
+      @apply text-success hover:bg-success/20 focus:ring-success;
+    }
+    &.warning {
+      @apply text-warning hover:bg-warning/20 focus:ring-warning;
+    }
+    &.error {
+      @apply text-error hover:bg-error/20 focus:ring-error;
     }
   }
   .soft {
     &.primary {
-      @apply text-primary bg-primary/20;
-      &:hover {
-        @apply bg-primary text-white;
-      }
+      @apply text-primary bg-primary/20 hover:bg-primary hover:text-white focus:ring-primary;
+    }
+    &.secondary {
+      @apply text-secondary bg-secondary/20 hover:bg-secondary hover:text-white focus:ring-secondary;
+    }
+    &.info {
+      @apply text-info bg-info/20 hover:bg-info hover:text-white focus:ring-info;
+    }
+    &.success {
+      @apply text-success bg-success/20 hover:bg-success hover:text-white focus:ring-success;
+    }
+    &.warning {
+      @apply text-warning bg-warning/20 hover:bg-warning hover:text-white focus:ring-warning;
+    }
+    &.error {
+      @apply text-error bg-error/20 hover:bg-error hover:text-white focus:ring-error;
     }
   }
   .link {
     &.primary {
-      @apply text-primary/80;
-      &:hover {
-        @apply text-primary;
-      }
+      @apply text-primary/80 hover:text-primary focus:ring-0 focus:ring-offset-0;
+    }
+    &.secondary {
+      @apply text-secondary/80 hover:text-secondary focus:ring-0 focus:ring-offset-0;
+    }
+    &.info {
+      @apply text-info/80 hover:text-info focus:ring-0 focus:ring-offset-0;
+    }
+    &.success {
+      @apply text-success/80 hover:text-success focus:ring-0 focus:ring-offset-0;
+    }
+    &.warning {
+      @apply text-warning/80 hover:text-warning focus:ring-0 focus:ring-offset-0;
+    }
+    &.error {
+      @apply text-error/80 hover:text-error focus:ring-0 focus:ring-offset-0;
     }
   }
 </style>
