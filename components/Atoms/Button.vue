@@ -24,7 +24,7 @@
 <template>
   <button
     type="button"
-    class="btn-base"
+    class="wrapper"
     :class="classNames"
     v-bind="$attrs"
     @click="emits('click')"
@@ -36,11 +36,10 @@
   scoped
   lang="scss"
 >
-  .btn-base {
+  .wrapper {
     @apply py-2
             px-4
             lg:px-8
-            xl:px-10
             inline-flex
             justify-center
             items-center
@@ -57,23 +56,24 @@
             ease-in-out;
   }
   .solid {
+    @apply text-white;
     &.primary {
-      @apply bg-primary/90 text-white hover:bg-primary focus:ring-primary;
+      @apply bg-primary/90 hover:bg-primary focus:ring-primary;
     }
     &.secondary {
-      @apply bg-secondary/90 text-white hover:bg-secondary focus:ring-secondary;
+      @apply bg-secondary/90 hover:bg-secondary focus:ring-secondary;
     }
     &.info {
-      @apply bg-info/90 text-white hover:bg-info focus:ring-info;
+      @apply bg-info/90 hover:bg-info focus:ring-info;
     }
     &.success {
-      @apply bg-success/90 text-white hover:bg-success focus:ring-success;
+      @apply bg-success/90 hover:bg-success focus:ring-success;
     }
     &.warning {
-      @apply bg-warning/90 text-white hover:bg-warning focus:ring-warning;
+      @apply bg-warning/90 hover:bg-warning focus:ring-warning;
     }
     &.error {
-      @apply bg-error/90 text-white hover:bg-error focus:ring-error;
+      @apply bg-error/90 hover:bg-error focus:ring-error;
     }
   }
   .outlined {
@@ -139,23 +139,24 @@
     }
   }
   .link {
+    @apply focus:ring-0 focus:ring-offset-0;
     &.primary {
-      @apply text-primary/80 hover:text-primary focus:ring-0 focus:ring-offset-0;
+      @apply text-primary/80 hover:text-primary;
     }
     &.secondary {
-      @apply text-secondary/80 hover:text-secondary focus:ring-0 focus:ring-offset-0;
+      @apply text-secondary/80 hover:text-secondary;
     }
     &.info {
-      @apply text-info/80 hover:text-info focus:ring-0 focus:ring-offset-0;
+      @apply text-info/80 hover:text-info;
     }
     &.success {
-      @apply text-success/80 hover:text-success focus:ring-0 focus:ring-offset-0;
+      @apply text-success/80 hover:text-success;
     }
     &.warning {
-      @apply text-warning/80 hover:text-warning focus:ring-0 focus:ring-offset-0;
+      @apply text-warning/80 hover:text-warning;
     }
     &.error {
-      @apply text-error/80 hover:text-error focus:ring-0 focus:ring-offset-0;
+      @apply text-error/80 hover:text-error;
     }
   }
 </style>
