@@ -58,22 +58,22 @@
   .solid {
     @apply text-white;
     &.primary {
-      @apply bg-primary/90 hover:bg-primary focus:ring-primary;
+      @apply bg-primary hover:bg-primary/90 focus:ring-primary;
     }
     &.secondary {
-      @apply bg-secondary/90 hover:bg-secondary focus:ring-secondary;
+      @apply bg-secondary hover:bg-secondary/90 focus:ring-secondary;
     }
     &.info {
-      @apply bg-info/90 hover:bg-info focus:ring-info;
+      @apply bg-info hover:bg-info/90 focus:ring-info;
     }
     &.success {
-      @apply bg-success/90 hover:bg-success focus:ring-success;
+      @apply bg-success hover:bg-success/90 focus:ring-success;
     }
     &.warning {
-      @apply bg-warning/90 hover:bg-warning focus:ring-warning;
+      @apply bg-warning hover:bg-warning/90 focus:ring-warning;
     }
     &.error {
-      @apply bg-error/90 hover:bg-error focus:ring-error;
+      @apply bg-error hover:bg-error/90 focus:ring-error;
     }
   }
   .outlined {
@@ -101,7 +101,6 @@
     &.primary {
       @apply text-primary hover:bg-primary/20 focus:ring-primary;
     }
-
     &.secondary {
       @apply text-secondary hover:bg-secondary/20 focus:ring-secondary;
     }

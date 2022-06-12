@@ -14,7 +14,7 @@
   });
   const classNames = computed(() => {
     return {
-      [`bg-${props.color}/90 text-white`]: props.variant === 'solid',
+      [`bg-${props.color} text-white`]: props.variant === 'solid',
       [`bg-${props.color}/20 text-${props.color}`]: props.variant === 'soft',
     };
   });
