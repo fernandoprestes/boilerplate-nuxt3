@@ -15,7 +15,7 @@ export default defineNuxtConfig({
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/public/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       {
@@ -26,6 +26,8 @@ export default defineNuxtConfig({
   },
 
   css: ['@/assets/css/main.css'],
+
+  modules: ['@vueuse/nuxt'],
 
   build: {
     postcss: {
