@@ -27,6 +27,8 @@ export default defineNuxtConfig({
 
   css: ['@/assets/css/main.css'],
 
+  modules: ['@vueuse/nuxt'],
+
   build: {
     postcss: {
       postcssOptions: {
