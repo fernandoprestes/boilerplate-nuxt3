@@ -7,13 +7,8 @@
   <div class="container text-left space-y-2">
     <h2 class="text-2xl">Forms input</h2>
 
-    <div class="flex flex-col text-white bg-slate-800 font-mono px-4 py-2 gap-2 sm:rounded-md">
-      <code>&lt;atoms-button variant="solid" color="secondary"&gt;Solid Primary&lt;&sol;atoms-button&gt;</code>
-    </div>
-    <div class="flex flex-col text-white bg-slate-800 font-mono px-4 py-2 gap-2 sm:rounded-md">
-      <p>variant = "solid" (default) | "outlined" | "soft" | "ghost" | "link"</p>
-      <p>color = "primary" (default) | "secondary" | "info" | "success" | "warning" | "error"</p>
-    </div>
+    <div class="bg-slate-800 p-2 rounded-md text-white w-full font-mono">🚧 Work in progress...</div>
+
     <div class="container text-left space-y-2">
       <h2 class="text-2xl">Inputs</h2>
       <div class="grid grid-cols-2 gap-2">
