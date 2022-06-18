@@ -1,7 +1,4 @@
-<script
-  lang="ts"
-  setup
->
+<script lang="ts" setup>
   const props = defineProps({
     variant: {
       type: String,
@@ -12,10 +9,12 @@
       default: 'primary',
     },
   });
+
   const classNames = computed(() => {
     return {
-      [`bg-${props.color} text-white`]: props.variant === 'solid',
-      [`bg-${props.color}/20 text-${props.color}`]: props.variant === 'soft',
+      [`bg-${props.color}`]: true,
+      [`text-white`]: props.variant === 'solid',
+      [`bg-${props.color} bg-opacity-20 text-${props.color}`]: props.variant === 'soft',
     };
   });
 </script>
@@ -28,7 +27,3 @@
     <slot />
   </span>
 </template>
-<style
-  scoped
-  lang="scss"
-></style>

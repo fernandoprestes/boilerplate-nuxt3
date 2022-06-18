@@ -1,7 +1,4 @@
-<script
-  lang="ts"
-  setup
->
+<script lang="ts" setup>
   const emits = defineEmits(['click']);
   const props = defineProps({
     variant: {
@@ -12,12 +9,18 @@
       type: String,
       default: 'primary',
     },
+    label: {
+      type: String,
+      default: null,
+    },
+    disabled: Boolean,
   });
 
   const classNames = computed(() => {
     return {
       [props.variant]: true,
       [props.color]: true,
+      [`opacity-30 cursor-default pointer-events-none`]: props.disabled,
     };
   });
 </script>
@@ -32,21 +35,19 @@
     <slot />
   </button>
 </template>
-<style
-  scoped
-  lang="scss"
->
+<style scoped lang="scss">
   .wrapper {
     @apply py-2
             px-4
             lg:px-8
-            inline-flex
+            flex
             justify-center
             items-center
             gap-2
             border
             border-transparent
-            rounded-md
+            rounded-lg
+            text-sm
             font-semibold
             focus:outline-none
             focus:ring-2
@@ -58,22 +59,25 @@
   .solid {
     @apply text-white;
     &.primary {
-      @apply bg-primary hover:bg-primary/90 focus:ring-primary;
+      @apply bg-primary focus:ring-primary;
     }
     &.secondary {
-      @apply bg-secondary hover:bg-secondary/90 focus:ring-secondary;
+      @apply bg-secondary focus:ring-secondary;
     }
     &.info {
-      @apply bg-info hover:bg-info/90 focus:ring-info;
+      @apply bg-info focus:ring-info;
     }
     &.success {
-      @apply bg-success hover:bg-success/90 focus:ring-success;
+      @apply bg-success focus:ring-success;
     }
     &.warning {
-      @apply bg-warning hover:bg-warning/90 focus:ring-warning;
+      @apply bg-warning  focus:ring-warning;
     }
     &.error {
-      @apply bg-error hover:bg-error/90 focus:ring-error;
+      @apply bg-error focus:ring-error;
+    }
+    &:hover {
+      @apply bg-opacity-90;
     }
   }
   .outlined {
@@ -119,22 +123,25 @@
   }
   .soft {
     &.primary {
-      @apply text-primary bg-primary/20 hover:bg-primary hover:text-white focus:ring-primary;
+      @apply text-primary bg-primary/20 hover:bg-primary focus:ring-primary;
     }
     &.secondary {
-      @apply text-secondary bg-secondary/20 hover:bg-secondary hover:text-white focus:ring-secondary;
+      @apply text-secondary bg-secondary/20 hover:bg-secondary focus:ring-secondary;
     }
     &.info {
-      @apply text-info bg-info/20 hover:bg-info hover:text-white focus:ring-info;
+      @apply text-info bg-info/20 hover:bg-info focus:ring-info;
     }
     &.success {
-      @apply text-success bg-success/20 hover:bg-success hover:text-white focus:ring-success;
+      @apply text-success bg-success/20 hover:bg-success focus:ring-success;
     }
     &.warning {
-      @apply text-warning bg-warning/20 hover:bg-warning hover:text-white focus:ring-warning;
+      @apply text-warning bg-warning/20 hover:bg-warning focus:ring-warning;
     }
     &.error {
-      @apply text-error bg-error/20 hover:bg-error hover:text-white focus:ring-error;
+      @apply text-error bg-error/20 hover:bg-error focus:ring-error;
+    }
+    &:hover {
+      @apply text-white;
     }
   }
   .link {
@@ -156,6 +163,9 @@
     }
     &.error {
       @apply text-error/80 hover:text-error;
+    }
+    &:hover {
+      @apply underline underline-offset-4;
     }
   }
 </style>
