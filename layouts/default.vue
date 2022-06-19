@@ -1,14 +1,13 @@
 <script lang="ts" setup>
-  import { useRoute } from 'vue-router';
+  import { useHead } from '@vueuse/head';
+  const route = useRoute();
+  useHead({
+    title: computed(() => `Nuxt3 | ${route.meta.title}`),
+  });
 
   const { width } = useWindowSize();
   const isMobile = computed(() => {
     return width.value < 1023;
-  });
-
-  const route = useRoute();
-  useHead({
-    title: computed(() => `Nuxt3 | ${route.meta.title}`),
   });
 
   const isShowMenuMobileOpen = ref(false);
@@ -31,13 +30,11 @@
         :class="isShowMenuMobileOpen ? 'fixed' : 'block fixed -translate-x-full'"
       >
         <div class="flex justify-between items-center">
-          <atoms-icon-arrow-back
+          <IconArrowBack
             v-if="isMobile"
             class="cursor-pointer text-2xl"
             @click="handleToggleMenu"
-          >
-            back
-          </atoms-icon-arrow-back>
+          />
           <div class="flex justify-center w-full text-3xl">
             <nuxt-link to="/">Home</nuxt-link>
           </div>
@@ -67,7 +64,7 @@
     <div class="px-2 w-full">
       <header class="flex justify-between sticky top-0 bg-white border-b border-gray-200 z-30 py-2">
         <div>
-          <atoms-icon-menu
+          <IconMenu
             v-if="isMobile"
             class="text-3xl cursor-pointer"
             @click="handleToggleMenu"

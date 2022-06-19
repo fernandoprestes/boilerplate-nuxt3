@@ -27,6 +27,10 @@ export default defineNuxtConfig({
 
   css: ['@/assets/css/main.css'],
 
+  components: {
+    dirs: ['~/components/Atoms'],
+  },
+
   modules: ['@vueuse/nuxt'],
 
   build: {
