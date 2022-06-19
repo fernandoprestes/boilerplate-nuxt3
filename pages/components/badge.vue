@@ -9,7 +9,7 @@
     <h2 class="text-2xl">Badge</h2>
 
     <div class="flex flex-col text-white bg-slate-800 font-mono px-4 py-2 gap-2 sm:rounded-md">
-      <code>&lt;atoms-badge variant="solid" color="secondary"&gt;Solid Primary&lt;&sol;atoms-badge&gt;</code>
+      <span>&lt;SBadge variant="solid" color="secondary"&gt;Solid Primary&lt;&sol;SBadge&gt;</span>
     </div>
     <div class="flex flex-col text-white bg-slate-800 font-mono px-4 py-2 gap-2 sm:rounded-md">
       <p>variant = "solid" (default) | "soft" "</p>
@@ -20,15 +20,15 @@
       :key="index"
       class="flex gap-2 flex-wrap flex-1 justify-center md:justify-start items-center"
     >
-      <atoms-badge
+      <SBadge
         variant="solid"
         :color="item"
-        >Solid {{ item }}</atoms-badge
+        >Solid {{ item }}</SBadge
       >
-      <atoms-badge
+      <SBadge
         variant="soft"
         :color="item"
-        >Soft {{ item }}</atoms-badge
+        >Soft {{ item }}</SBadge
       >
     </div>
   </div>
